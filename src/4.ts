@@ -35,7 +35,7 @@ class Key {
     abstract openDoor(key: Key): void;
   
     comeIn(person: Person): void {
-      if (this.door) {
+      if (this.door) {                       //Прибрав рівність сигнатур
           this.tenants.push(person);
           console.log('Person came in.');
       } else {
