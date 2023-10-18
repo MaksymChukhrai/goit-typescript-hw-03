@@ -35,14 +35,14 @@ class Key {
     abstract openDoor(key: Key): void;
   
     comeIn(person: Person): void {
-      if (this.door && this.key.getSignature() === person.getKey().getSignature()) {
-        this.tenants.push(person);
-        console.log('Person came in.');
+      if (this.door) {
+          this.tenants.push(person);
+          console.log('Person came in.');
       } else {
-        console.log('Person can\'t come in.');
+          console.log('Person can\'t come in.');
       }
-    }
   }
+}
   
   class MyHouse extends House {
     openDoor(key: Key): void {
